@@ -23,12 +23,14 @@ $gray: #7D8698
 
 body
   position: relative
-  &.active
-    overflow: hidden
+  overflow: hidden
   &.hidden
     @media (max-width: 400px)
       overflow: hidden
-
+  &.hidden-off
+    overflow: visible
+  &.active
+    overflow: hidden
 li
   list-style-type: none
 

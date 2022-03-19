@@ -1,3 +1,5 @@
+const body = document.querySelector('body')
+
 //SCROLL ANIM
 
 var isScrolling = false;
@@ -45,3 +47,21 @@ function isFullyVisible(el) {
 
 	return ((top >= 0) && (bottom <= window.innerHeight + 150));
 }
+
+//Smooth scroll
+
+function scrollTo(element) {
+	window.scroll({
+		left: 0,
+		top: element.offsetTop - 50,
+		behavior: 'smooth'
+	})
+}
+
+var btnScroll = document.querySelector('.intro__navigate');
+var project = document.querySelector('.project');
+
+btnScroll.addEventListener('click', () => {
+	scrollTo(project);
+	body.classList.add('hidden-off')
+})

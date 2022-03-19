@@ -122,6 +122,7 @@ btnPop.forEach(function (item){
 		})
 		contentOut.addEventListener('click',function (){
 			popupContent.classList.remove('active')
+			document.querySelector('body').classList.remove('active')
 		})
 	})
 })

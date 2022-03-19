@@ -108,6 +108,7 @@ document.querySelector('.reg__icon').addEventListener('click',function (){
 const btnPop = document.querySelectorAll('.btn__target')
 const popupContent = document.querySelector('.reg')
 const contentExit = document.querySelector('.reg__exit')
+const contentOut = document.querySelector('.reg__out')
 
 btnPop.forEach(function (item){
 	item.addEventListener('click',function (e){
@@ -119,5 +120,31 @@ btnPop.forEach(function (item){
 			popupContent.classList.remove('active')
 			document.querySelector('body').classList.remove('active')
 		})
+		contentOut.addEventListener('click',function (){
+			popupContent.classList.remove('active')
+		})
 	})
 })
+
+//HEADER
+const section = document.querySelectorAll('section')
+const header = document.querySelector('.header')
+
+
+section.forEach(function (item){
+	console.log(item);
+	window.addEventListener('scroll',function (){
+		if(window.scrollY >= item.offsetTop){
+			const sectionAttr = item.getAttribute("data-theme")
+			if (sectionAttr === "black"){
+				header.classList.remove('black')
+			}
+			if (sectionAttr === "white") {
+				header.classList.remove('white')
+				header.classList.add('black')
+			}
+		}
+	})
+
+})
+

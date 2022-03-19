@@ -1,7 +1,6 @@
 .reg
   width: 100%
   height: 100vh
-  display: flex
   background-color: rgba(41,41,41,.7)
   position: fixed
   top: 0
@@ -13,12 +12,20 @@
   &.active
     opacity: 1
     pointer-events: visible
+  &__out
+    width: 100%
+    height: 100vh
+    background-color: transparent
+    position: relative
+    z-index: 1001
+    display: flex
   &__inner
     margin: auto
     padding: 40px 30px
     width: 430px
     background-color: white
     position: relative
+    z-index: 1002
     @media (max-width: 598.99px)
       width: 330px
   &__exit

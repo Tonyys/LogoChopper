@@ -4,15 +4,40 @@
   left: 0
   right: 0
   margin: auto
-  max-width: 1720px
+  max-width: 1760px
   width: 100%
   padding: 20px 20px
   opacity: 0
   transition: 1s cubic-bezier(.3,.6,.5, 1)
   &.fade-on
     opacity: 1
-  @media (max-width: 1399.99px)
-    padding: 20px 0
+  &.black
+    .header__inner
+      background-color: $black
+    .header__logo
+      path
+        fill: $white
+    .header__logo-mobile
+      path
+        fill: $white
+    .header__link
+      color: $white
+      &:hover
+        color: $blue
+    .header__email
+      color: $white
+    .header__lang-choose
+      &:hover
+        color: $white
+    .header__btn
+      background-color: $white
+      color: $black
+    .burger__item
+      background-color: $white
+    .burger
+      &.active
+        .burger__item
+          background-color: $black
   @media (max-width: 1279.99px)
     padding: 20px 40px
   @media (max-width: 598.99px)
@@ -21,13 +46,24 @@
     @media (max-width: 1279.99px)
       padding: 0 5px
   &__inner
+    padding: 3px 40px
     display: flex
     justify-content: space-between
     align-items: center
     background-color: white
     border-radius: 90px
+    transition-duration: .4s
     @media (max-width: 1399.99px)
-      padding: 8px
+      padding: 8px 20px
+    @media (max-width: 1279.99px)
+      padding: 8px 30px
+    @media (max-width: 1023.99px)
+      padding: 2px 30px
+    @media (max-width: 599.99px)
+      padding: 2px 15px
+  &__logo-link
+    @media (max-width: 1399.99px)
+      display: none
   &__logo
     padding: 2px 0
     margin-bottom: -2px
@@ -37,6 +73,14 @@
     width: 100%
     @media (max-width: 1399.99px)
       display: none
+    path
+      transition-duration: .4s
+  &__logo-link-mobile
+    display: none
+    @media (max-width: 1023.99px)
+      display: block
+    path
+      transition-duration: .4s
   &__logo-mobile
     display: none
     padding: 2px 0
@@ -70,7 +114,7 @@
     color: $black
     font-size: 16px
     font-weight: 600
-    transition-duration: .3s
+    transition-duration: .4s
     &:hover
       color: $blue
   &__access
@@ -87,7 +131,7 @@
     font-weight: 600
     text-decoration: none
     color: #BBBBBB
-    transition-duration: .3s
+    transition-duration: .4s
     &:hover
       color: $black
     &:not(:last-child)
@@ -97,6 +141,7 @@
     font-size: 16px
     font-weight: 600
     text-decoration: none
+    transition-duration: .4s
   &__btn
     min-width: 230px
     padding: 14px 37px
@@ -109,7 +154,7 @@
     text-align: center
     background-color: $black
     border-radius: 80px
-    transition-duration: .3s
+    transition-duration: .4s
     transform: scaleX(1)
     &:hover
       transform: scaleX(1.02)
@@ -205,7 +250,7 @@
       @media (max-width: 1023.99px)
         padding: 22px 20px 35px
       @media (max-width: 598.99px)
-        padding: 17px 20px 35px
+        padding: 10px 20px 35px
     &__top
       margin-bottom: 20px
       display: flex

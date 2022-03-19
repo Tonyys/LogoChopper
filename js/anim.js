@@ -61,6 +61,7 @@ function scrollTo(element) {
 var btnScroll = document.querySelector('.intro__navigate');
 var project = document.querySelector('.project');
 
-btnScroll.addEventListener('click', () => {
+btnScroll.addEventListener('click', (e) => {
+	e.preventDefault()
 	scrollTo(project);
 })

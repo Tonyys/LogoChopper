@@ -1,0 +1,88 @@
+.reviews
+  padding: 120px 0
+  opacity: 0
+  transition: 1s cubic-bezier(.3,.6,.5, 1)
+  will-change: opacity
+  @media (max-width: 1023.99px)
+    padding: 80px 0
+  @media (max-width: 598.99px)
+    padding: 60px 0
+  &.fade-on
+    opacity: 1
+  &__swiper
+    max-width: 800px
+    margin: 0!important
+  &__slide
+    display: flex
+    flex-direction: column
+  &__text
+    max-width: 800px
+    width: 100%
+    margin-bottom: 60px
+    display: flex
+    flex-direction: column
+    @media (max-width: 598.99px)
+      margin-bottom: 30px
+  &__content
+    font-size: 24px
+    font-weight: 400
+    color: $black
+    line-height: 150%
+    &:not(:last-child)
+      margin-bottom: 40px
+      @media (max-width: 598.99px)
+        margin-bottom: 25px
+    @media (max-width: 1023.99px)
+      font-size: 20px
+    @media (max-width: 766.99px)
+      font-size: 16px
+    @media (max-width: 598.99px)
+      font-size: 12px
+  &__person
+    display: flex
+    flex-direction: column
+  &__name
+    margin-bottom: 10px
+    font-size: 24px
+    font-weight: 600
+    color: $black
+    @media (max-width: 1023.99px)
+      font-size: 20px
+    @media (max-width: 766.99px)
+      font-size: 16px
+    @media (max-width: 598.99px)
+      font-size: 12px
+  &__position
+    color: $gray
+    font-size: 18px
+    font-weight: 400
+    @media (max-width: 1023.99px)
+      font-size: 16px
+    @media (max-width: 766.99px)
+      font-size: 14px
+    @media (max-width: 598.99px)
+      font-size: 12px
+  &__navigate
+    position: relative
+  .swiper-button-prev
+    position: absolute
+    width: 63px
+    height: 16px
+    right: 110px
+    left: unset
+    top: unset
+    @media (max-width: 766.99px)
+      width: 55px
+      right: 90px
+    @media (max-width: 598.99px)
+      width: 40px
+      right: 70px
+  .swiper-button-next
+    width: 63px
+    height: 16px
+    right: 0
+    top: unset
+    @media (max-width: 766.99px)
+      width: 55px
+    @media (max-width: 598.99px)
+      width: 40px

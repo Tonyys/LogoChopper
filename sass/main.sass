@@ -1,0 +1,72 @@
+$black: #21222B
+$blue: #41A4DC
+$white: #fff
+$gray: #7D8698
+
+@import "header"
+@import "intro"
+@import "project"
+@import "info"
+@import "show"
+@import "work"
+@import "reviews"
+@import "footer"
+@import "reg"
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: "Inter"
+  font-size: 18px
+  color: #21222B
+
+body
+  position: relative
+  &.active
+    overflow: hidden
+  &.hidden
+    @media (max-width: 400px)
+      overflow: hidden
+
+li
+  list-style-type: none
+
+a
+  text-decoration: none
+.container
+  padding: 0 40px
+  max-width: 1080px
+  width: 100%
+  margin: 0 auto
+  @media (max-width: 1023.99px)
+    max-width: 1160px
+    padding: 0 80px
+  @media (max-width: 598.99px)
+    padding: 0 20px
+.btn
+  display: inline-block
+  max-width: 201px
+  padding: 14px 32px
+  font-size: 14px
+  font-weight: 700
+  text-decoration: none
+  text-align: center
+  text-transform: uppercase
+  color: #494A51
+  border: 1px solid #494A51
+  border-radius: 80px
+  transform: scale(1)
+  transition-duration: .4s
+  &:hover
+    transform: scale(1.05)
+  @media (max-width: 766.99px)
+    max-width: 190px
+    font-size: 12px
+  @media (max-width: 598.99px)
+    max-width: 170px
+    font-size: 10px
+
+.btn-white
+  color: $white
+  border: 1px solid $white

@@ -1,0 +1,76 @@
+.show
+  max-height: 1000px
+  padding: 300px 0 178px 0
+  overflow: hidden
+  opacity: 0
+  transition: 1s cubic-bezier(.3,.6,.5, 1)
+  will-change: opacity
+  @media (max-width: 1023.99px)
+    max-height: 850px
+    padding: 220px 0 178px 0
+  @media (max-width: 899.99px)
+    padding: 160px 0 0 0
+    max-height: 700px
+  @media (max-width: 598.99px)
+    padding: 150px 0 0 0
+    max-width: 670px
+  &.fade-on
+      opacity: 1
+  &__slide
+    overflow: hidden
+    transform: scale(1)
+    transition-duration: .4s
+    will-change: transform
+    &:hover
+      transform: scale(1.03)
+  &__img
+    width: 105%
+    height: 100%
+    object-fit: cover
+  .swiper
+    z-index: 2
+    overflow: visible
+    transform: rotate(4deg)
+    @media (max-width: 598.99px)
+      transform: rotate(0)
+  .swiper-wrapper
+    display: flex
+    align-items: center
+    transition: cubic-bezier(.29,.51,.5,1.13)
+    will-change: transform
+  .swiper-slide
+    width: 360px
+    height: 360px
+    @media (max-width: 1023.99px)
+      width: 290px
+      height: 290px
+    &:nth-child(even)
+      height: 480px
+      @media (max-width: 1023.99px)
+        width: 410px
+        height: 410px
+  .swiper__bg
+    z-index: 1
+    top: -500px
+    left: 0
+    opacity: .6
+    filter: blur(100px) saturate(10)
+    pointer-events: none
+    & .swiper-slide
+      height: 400px
+      &:nth-child(even)
+        height: 600px
+    @media (max-width: 1023.99px)
+      top: -400px
+    @media (max-width: 899.99px)
+      top: -350px
+  &__slide-bg
+    @media (max-width: 1023.99px)
+      height: 270px!important
+    @media (max-width: 899.99px)
+      height: 200px!important
+    &:nth-child(even)
+      @media (max-width: 1023.99px)
+        height: 390px!important
+      @media (max-width: 899.99px)
+        height: 320px!important

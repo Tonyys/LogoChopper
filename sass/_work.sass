@@ -1,0 +1,120 @@
+.work
+  padding: 120px 0
+  background-color: $black
+  @media (max-width: 1023.99px)
+    padding: 80px 0
+  @media (max-width: 598.99px)
+    padding: 60px 0
+  &__inner
+    display: flex
+    justify-content: space-between
+    position: relative
+    @media (max-width: 899.99px)
+      flex-direction: column
+      align-items: center
+      text-align: center
+  &__left
+    max-width: 430px
+    width: 100%
+    @media (max-width: 899.99px)
+      order: 2
+  &__sticky
+    position: sticky
+    top: 100px
+    display: flex
+    flex-direction: column
+    align-items: start
+    @media (max-width: 899.99px)
+      margin-top: 80px
+      position: relative
+      top: 0
+      align-items: center
+    @media (max-width: 598.99px)
+      margin-top: 60px
+  &__title
+    margin-bottom: 50px
+    color: $white
+    font-size: 24px
+    font-weight: 600
+    transform: translate(-200%,0px)
+    opacity: 0
+    transition: 1s cubic-bezier(.3,.6,.5, 1)
+    &.fade-on
+      opacity: 1
+      transform: translate(0,0px)
+    @media (max-width: 899.99px)
+      display: none
+  &__title-mobile
+    margin-bottom: 80px
+    display: none
+    font-size: 36px
+    color: white
+    font-weight: 400
+    @media (max-width: 899.99px)
+      display: block
+    @media (max-width: 766.99px)
+      font-size: 30px
+    @media (max-width: 598.99px)
+      font-size: 24px
+      margin-bottom: 60px
+  &__btn
+    transform: translate(-200%,0px)
+    opacity: 0
+    transition: 1s cubic-bezier(.3,.6,.5, 1) .2s
+    &.fade-on
+      opacity: 1
+      transform: translate(0,0px)
+  &__right
+    max-width: 430px
+    width: 100%
+    display: flex
+    flex-direction: column
+    overflow: hidden
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: start
+    &:not(:last-child)
+      margin-bottom: 73px
+      @media (max-width: 766.99px)
+        margin-bottom: 60px
+    @media (max-width: 899.99px)
+      align-items: center
+    &-title
+      margin-bottom: 45px
+      color: $white
+      font-size: 30px
+      font-weight: 400
+      transform: translate(100%,0px)
+      opacity: 0
+      transition: .5s cubic-bezier(.3,.6,.5, 1)
+      &.fade-on
+        opacity: 1
+        transform: translate(0,0px)
+      @media (max-width: 1023.99px)
+        font-size: 28px
+      @media (max-width: 766.99px)
+        font-size: 24px
+        margin-bottom: 30px
+      @media (max-width: 598.99px)
+        font-size: 20px
+        margin-bottom: 25px
+    &-text
+      color: $gray
+      font-size: 20px
+      font-weight: 400
+      line-height: 150%
+      opacity: 0
+      transform: translate(-100%,0)
+      transition: 1s cubic-bezier(.3,.6,.5, 1) .1s
+      &.fade-on
+        transform: translate(0,0)
+        opacity: 1
+      @media (max-width: 1023.99px)
+        font-size: 18px
+      @media (max-width: 766.99px)
+        font-size: 16px
+      @media (max-width: 598.99px)
+        font-size: 14px
+
+
